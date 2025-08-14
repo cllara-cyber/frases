@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <title>Frase Aleatória</title>
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
     body {
       font-family: "Helvetica Neue", sans-serif;
-      background: #ffffff; /* fundo branco puro */
       color: #333;
       text-align: center;
-      font-size: 1.1em; /* menor ainda */
-      padding: 10px;
-      margin: 0;
+      font-size: 0.9em; /* menor para compensar zoom do Notion */
+      line-height: 1.4;
+    }
+    #frase {
+      display: inline-block;
+      padding: 4px 8px;
     }
   </style>
 </head>
@@ -29,8 +36,8 @@
       "Avançar um milímetro ainda é avançar."
     ];
 
-    const aleatoria = frases[Math.floor(Math.random() * frases.length)];
-    document.getElementById("frase").textContent = aleatoria;
+    document.getElementById("frase").textContent =
+      frases[Math.floor(Math.random() * frases.length)];
   </script>
 </body>
 </html>
