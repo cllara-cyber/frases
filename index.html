@@ -4,21 +4,17 @@
   <meta charset="UTF-8">
   <title>Frase Aleatória</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #ffffff;
-    }
     body {
       font-family: "Helvetica Neue", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #ffffff; /* fundo branco puro */
       color: #333;
       text-align: center;
-      font-size: 0.9em; /* menor para compensar zoom do Notion */
-      line-height: 1.4;
-    }
-    #frase {
-      display: inline-block;
-      padding: 4px 8px;
+      font-size: 1.2em; /* tamanho de fonte menor */
+      padding: 20px;
     }
   </style>
 </head>
@@ -37,8 +33,8 @@
       "Você não precisa ser tudo hoje. Basta ser o que você precisa ser agora."
     ];
 
-    document.getElementById("frase").textContent =
-      frases[Math.floor(Math.random() * frases.length)];
+    const aleatoria = frases[Math.floor(Math.random() * frases.length)];
+    document.getElementById("frase").textContent = aleatoria;
   </script>
 </body>
 </html>
